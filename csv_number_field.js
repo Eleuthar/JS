@@ -19,7 +19,7 @@ function sanitize_number(num) {
 // make text field behave like a number field
 // remove comma and extra dots from num to allow conversion to float
 function number_input_behaviour(input, max_decimal_length) {
-    // [ "3", "4,5", "67,6", "7", "", "", "77", "", "", "", "666"].join('.')
+    // handle invalid pasted input like [ "3", "4,5", "67,6", "7", "", "", "77", "", "", "", "666"].join('.')
     const splitted = pin.value.split('.');
     // value has no decimal
     if (splitted.length == 1) {
